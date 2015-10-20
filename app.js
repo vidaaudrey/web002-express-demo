@@ -6,8 +6,16 @@
 
   app = express();
 
+  app.use(express["static"](__dirname + '/public'));
+
   app.get('/', function(req, res) {
-    return res.end('Hello world, using nodemon');
+    return res.end('Hello world, using nodemon, livereload');
+  });
+
+  app.get('/cities', function(req, res) {
+    var cities;
+    cities = ['Beijing', 'Shanghai', 'SF', "NY"];
+    return res.json(cities);
   });
 
   module.exports = app;

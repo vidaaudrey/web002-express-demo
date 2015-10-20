@@ -4,7 +4,9 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "mocha test.js"
+    "test": "mocha -w --reporter spec test", 
+    "livereload": "live-reload --port 3000 coffee/"
+
   },
   "author": "Audrey Li",
   "license": "ISC",
@@ -12,6 +14,7 @@
     "express": "^4.13.3"
   },
   "devDependencies": {
+    "live-reload": "^1.1.0",
     "mocha": "^2.3.3",
     "supertest": "^1.1.0"
   }
