@@ -4,13 +4,13 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "mocha -w --reporter spec test", 
+    "test": "mocha -w --reporter spec test",
     "livereload": "live-reload --port 3000 coffee/"
-
   },
   "author": "Audrey Li",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.14.1",
     "express": "^4.13.3"
   },
   "devDependencies": {

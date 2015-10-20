@@ -35,4 +35,13 @@
     });
   });
 
+  describe('Creating new cities', function() {
+    it('Returns a 201 status code', function(done) {
+      return request(app).post('/cities').send('name=Paris&description=beautiful+city').expect(201, done());
+    });
+    return it('Returns the city name', function(done) {
+      return request(app).post('/cities').send('name=Paris&description=beautiful+city').expect(/paris/i, done());
+    });
+  });
+
 }).call(this);

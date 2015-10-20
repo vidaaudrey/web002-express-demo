@@ -39,4 +39,15 @@ describe 'Listing cities on /cities', ->
 
 
   
-        
+describe 'Creating new cities', ->
+    it 'Returns a 201 status code', (done) ->
+        request app
+            .post '/cities'
+            .send 'name=Paris&description=beautiful+city'
+            .expect 201, done()
+
+    it 'Returns the city name', (done) ->
+        request app
+            .post '/cities'
+            .send 'name=Paris&description=beautiful+city'
+            .expect /paris/i, done()
