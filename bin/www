@@ -1,6 +1,7 @@
 #!/usr/bin/env nodemon 
 
 var app = require('./../app');
-app.listen(3000, function(){
-    console.log('listening to 3000');
+var port = process.env.PORT || 3000;
+app.listen(port, function(){
+    console.log('listening to ' + port);
 });
